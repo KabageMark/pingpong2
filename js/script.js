@@ -1,4 +1,4 @@
-function ping(number) {
+function check(number) {
   var results = [];
   for (var i = 1; i <= number; i++) {
 
@@ -18,9 +18,9 @@ function ping(number) {
 $(document).ready(function() {
   $("#ball").submit(function(event) {
     event.preventDefault();
-    $("#result").empty();
+    $(".results").empty();
     var result = parseInt($("input#pinging").val());
-    var results = ping(result);
+    var results = check(result);
     results.forEach(function(results) {
     $(".results").append($("<li>").html(results));
     });
